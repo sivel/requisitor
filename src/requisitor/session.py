@@ -36,7 +36,7 @@ class Session:
         self.handlers = []
         self.params = {}
         self.unix_socket = None
-        self.verify = None
+        self.verify = True
 
     @property
     def auth(self):

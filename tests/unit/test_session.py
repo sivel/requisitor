@@ -160,7 +160,7 @@ def test_request_fallbacks(full_session, monkeypatch):
         call(Sentinel, None),  # cert
         call(Sentinel, session.cookies),  # cookies
         call(Sentinel, None),  # unix_socket
-        call(Sentinel, None),  # verify
+        call(Sentinel, True),  # verify
     ]
 
     _fallback = MagicMock(return_value=None)
@@ -189,7 +189,7 @@ def test_request_overrides(full_session, monkeypatch):
         call(('cert', 'key'), None),  # cert
         call(cookies, session.cookies),  # cookies
         call(True, None),  # unix_socket
-        call(False, None),  # verify
+        call(False, True),  # verify
     ]
 
     _fallback = MagicMock(return_value=None)
