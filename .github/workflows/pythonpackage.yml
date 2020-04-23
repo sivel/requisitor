@@ -5,9 +5,11 @@ name: Python package
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - '*'
   pull_request:
-    branches: [ master ]
+    branches:
+      - '*'
 
 jobs:
   build:
@@ -19,7 +21,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-      
+
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v1
       with:
