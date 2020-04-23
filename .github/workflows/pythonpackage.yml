@@ -24,9 +24,11 @@ jobs:
         ports:
           - 80:80
           - 443:443
-        options: '--net-alias default.test --net-alias sni1.default.test --net-alias sni2.default.test --net-alias fail.default.test'
+        options: '--network-alias default.test --network-alias sni1.default.test --network-alias sni2.default.test --network-alias fail.default.test'
 
     steps:
+      - run: cat /etc/hosts
+
       - uses: actions/checkout@v2
 
       - name: Set up Python ${{ matrix.python-version }}
