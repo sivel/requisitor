@@ -24,7 +24,6 @@ jobs:
         ports:
           - 80:80
           - 443:443
-        options: '--network-alias default.test --network-alias sni1.default.test --network-alias sni2.default.test --network-alias fail.default.test'
 
     steps:
       - run: cat /etc/hosts
@@ -35,6 +34,10 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: ${{ matrix.python-version }}
+
+      - name: Add hosts
+        run: |
+          echo "127.0.0.1 default.test sni1.default.test sni2.default.test fail.default.test" | sudo tee -a /etc/hosts
 
       - name: Install dependencies
         run: |
