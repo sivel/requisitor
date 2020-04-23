@@ -1,5 +1,7 @@
 # requisitor
 
+![](https://github.com/sivel/requisitor/workflows/CI/badge.svg?branch=master)
+
 Simple HTTP library utilizing only Python stdlib
 
 ## Examples
