@@ -26,8 +26,6 @@ jobs:
           - 443:443
 
     steps:
-      - run: cat /etc/hosts
-
       - uses: actions/checkout@v2
 
       - name: Set up Python ${{ matrix.python-version }}
