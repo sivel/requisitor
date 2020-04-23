@@ -37,6 +37,11 @@ jobs:
         run: |
           echo "127.0.0.1 default.test sni1.default.test sni2.default.test fail.default.test" | sudo tee -a /etc/hosts
 
+      - name: Install ca cert
+        run: |
+          sudo wget -O /usr/local/share/ca-certificates/httptester.crt http://default.test/cacert.pem
+          sudo update-ca-certificates
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
@@ -46,9 +51,13 @@ jobs:
         run: |
           tox -e style
 
-      - name: pytest
+      - name: unit
         run: |
-          tox -e py
+          tox -e py -- tests/unit/
+
+      - name: integration
+        run: |
+          tox -e py -- tests/integration/
         env:
           HTTPBIN: default.test
           HTTPBIN_SSL: 'True'
