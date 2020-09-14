@@ -46,7 +46,7 @@ setup(
     keywords='http',
     package_dir={'': 'src'},
     packages=find_packages(where='src'),
-    python_requires='>=3.5, <4',
+    python_requires='>=3.6, <4',
     project_urls={
         'Bug Reports': 'https://github.com/sivel/requisitor/issues',
         'Source': 'https://github.com/sivel/requisitor/',
