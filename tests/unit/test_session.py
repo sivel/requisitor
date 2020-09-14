@@ -11,6 +11,7 @@ import requisitor.session
 from requisitor.auth import HTTPDigestAuth
 from requisitor.handlers import UnixHTTPHandler
 from requisitor.headers import Headers
+from requisitor.headers import normalize_headers
 from requisitor.sentinel import Sentinel
 
 
@@ -137,8 +138,18 @@ def test_create_context(session):
 def test_request_files(full_session):
     session, build_opener, opener, response = full_session
 
-    with pytest.raises(NotImplementedError):
-        session.request('GET', 'http://foo.bar', files='foo')
+    session.request(
+        'GET',
+        'http://foo.bar',
+        files={'file1': {'content': 'bar'}}
+    )
+
+    args, kwargs = opener.open.call_args
+    request = args[0]
+    headers = normalize_headers(request.headers)
+
+    assert headers.get_boundary() is not None
+    assert headers.get_content_type() == 'multipart/form-data'
 
 
 def test_request_data_json(full_session):

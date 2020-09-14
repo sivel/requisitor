@@ -15,6 +15,7 @@
 #    under the License.
 
 import io
+import os
 import pathlib
 import urllib.parse
 
@@ -57,11 +58,13 @@ def is_binary_fileobj(obj):
     return isinstance(obj, (io.RawIOBase, io.BufferedIOBase))
 
 
-def get_filename(obj):
-    if is_binary_fileobj(obj) or isinstance(obj, pathlib.Path):
-        return obj.name
+def get_filename(obj, basename=True):
+    if isinstance(obj, pathlib.Path):
+        return obj.name if basename else str(obj)
+    elif is_binary_fileobj(obj):
+        return os.path.basename(obj.name) if basename else obj.name
     elif isinstance(obj, str):
-        return obj
+        return os.path.basename(obj) if basename else obj
     else:
         raise TypeError(
             'value must be a str, pathlib.Path, or binary file object, '
@@ -87,7 +90,7 @@ def read_bytes(obj):
         )
 
 
-def ensure_bytes(obj, encoding=None):
+def ensure_bytes(obj, encoding='utf-8'):
     if isinstance(obj, bytes):
         return obj
     return obj.encode(encoding)

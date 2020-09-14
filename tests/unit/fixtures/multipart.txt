@@ -1,0 +1,110 @@
+--===============9055186793967377464==
+Content-Type: text/plain
+Content-Disposition: form-data; name="file1"; filename="fake_file1.txt"
+
+file_content_1
+--===============9055186793967377464==
+Content-Type: text/html
+Content-Disposition: form-data; name="file2"; filename="fake_file2.html"
+
+<html></html>
+--===============9055186793967377464==
+Content-Type: application/json
+Content-Disposition: form-data; name="file3"; filename="fake_file3.json"
+
+{"foo": "bar"}
+--===============9055186793967377464==
+Content-Type: text/plain
+Content-Disposition: form-data; name="file4"; filename="cacert.pem"
+
+-----BEGIN CERTIFICATE-----
+MIIDODCCAiACCQCc7scL36MovjANBgkqhkiG9w0BAQsFADBeMQswCQYDVQQGEwJV
+UzEOMAwGA1UECAwFVGV4YXMxFDASBgNVBAcMC1NhbiBBbnRvbmlvMQ4wDAYDVQQK
+DAVTaXZlbDEZMBcGA1UEAwwQYm9ndXMuaHR0cC50ZXN0czAeFw0yMDA0MjExNjQ0
+MTdaFw0zMDA0MTkxNjQ0MTdaMF4xCzAJBgNVBAYTAlVTMQ4wDAYDVQQIDAVUZXhh
+czEUMBIGA1UEBwwLU2FuIEFudG9uaW8xDjAMBgNVBAoMBVNpdmVsMRkwFwYDVQQD
+DBBib2d1cy5odHRwLnRlc3RzMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+AQEAuzZFtrSr0JQDnq9bdRE7AWcaHyAjZxZuNMsteCQMJT+I3whLtTGXidWhLggt
+bj+2+DU1AFTH+QicFK3kV1ETD/a+bmOsgtELcPsJHCefOvaJB42FV3zLY8g+iA6x
+IB66FBfSWWJUKeBgXb+MBsj+69v5s/fGbqMSN0LCJE5x7MpsQb/02I5OIhvNaPd8
+4oYQG9yEL3sZMD63Uyqd0M4ouXZiFCbQHEYbY1PFcmnHNOuGz13Dfd47G7x5JDOv
+3GLXK1hFE7RbI0vlVDSlmmlg+nNS2H1HxPK80unWNccXB9gnr310jLJgJz/7hSBZ
+89eW6qBQJuQdB6DbCbpYEOKuuwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCpLabK
+4xo7MxYUD0aGC99o5wgr3viLVLNBM3oqK6nYurHcDGFIBjxEsr9lQ09uYnUzNaRd
+vx0gXFuT3fgz8OuOxIRiIZgJPPF2UqHGg36xXj8f5jotbFHOQ0FX/rVZ4a5Mo1fv
+ENJWdlNTgNK0+v7XKjMPN/cwKmItMh23ahXxI5aQavoeRS1VAXiL1IpMr9jJiHpD
+6zZuq/DtOtkiFWec5+KmYJ7+O/Dy0kxnBSTnmHBCBH6q4uDsVgSQqUarW8TcBMBS
+lE/u7+jSVGSzPmDLHPzP7Q1hv/9gnAZOxe7SeYjIGTdxxroGynOyIkfs41VCL7IK
+z62j3oGM89avbe0F
+-----END CERTIFICATE-----
+
+--===============9055186793967377464==
+Content-Type: application/octet-stream
+Content-Disposition: form-data; name="file5"; filename="cakey.pem"
+
+-----BEGIN PRIVATE KEY-----
+MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC7NkW2tKvQlAOe
+r1t1ETsBZxofICNnFm40yy14JAwlP4jfCEu1MZeJ1aEuCC1uP7b4NTUAVMf5CJwU
+reRXURMP9r5uY6yC0Qtw+wkcJ5869okHjYVXfMtjyD6IDrEgHroUF9JZYlQp4GBd
+v4wGyP7r2/mz98ZuoxI3QsIkTnHsymxBv/TYjk4iG81o93zihhAb3IQvexkwPrdT
+Kp3Qzii5dmIUJtAcRhtjU8Vyacc064bPXcN93jsbvHkkM6/cYtcrWEUTtFsjS+VU
+NKWaaWD6c1LYfUfE8rzS6dY1xxcH2CevfXSMsmAnP/uFIFnz15bqoFAm5B0HoNsJ
+ulgQ4q67AgMBAAECggEAfp+zwWMsPvSOCjujSWgxF77LnTfYmjZCrjSqeXMwP9Vc
+VzY+NrznOVQkI4VmbQZtVC5wvduaMiePojEHm8N7eDW1Eeca3JRV/8HbpI5sFa6A
+enpPMSB4VPIw0UfWp9oAk+yU2t41/OkFZQNUy5YRTihIGWDCdzyW6oed1n60capE
+L0njrC+EhKoEw7L3Z7mwAR9wG4Z+UatDXr3MdRb2FKXtn0g9dM7bCdlhWSl2yOHU
+2RIU91dWdtkoD6N6Z5zj4yi0beVmNPcXcy0DtgsvL86sro9Oj7MF8DECmQkN1k8K
+uf0as6cmNdoDRpgaoBddiU3sxd1Ddjbc0oFqfeNtIQKBgQDbSVRvMrT1ZRlsFuov
+eYa/wysNfvIjuGEbXQo/5/DZepK42ERHYFRamw+T0vdc6qLml/vWWc3VSeovLgjC
+WmiE2rhLjz3kPaN9C3PhjYNDEPrY6Xd7vk7eSbeTh4nAR/sAYoFzRFdkF+0K9hSy
+NfCucO+NScDenMVoFZRCuzcrMQKBgQDajjldOHhht8Go/MOzrKpfdKSW2LFULntZ
+RMjV+OB6rA8bVx8v+styVrALswgsfi03z826Jg4E+p1C0CDypyhBTP0kwNsLuTWv
+Z61E6df6SNIrR2+pn2dpAJmjjH8r+0fMng1+ibQOp/xnBfBKcPs4yzeYg9oXrJhb
+jNtZ+kblqwKBgANlbFhYibLvQOiKpk/b6vlXVXhdCfUBqwdYdoss1W8Y1eLk/pG4
+bTYGBsS8VLZsr98wZWcZdvWhsm3OobYY3luIY6hP7J53Uevi3IWWwnysa6YmX4Jc
+HS6WJ7CyPbDrrHiCDg0x9sSHFlXAH+vup+6bsyoWBVWtSeVlyCkMaztRAoGBANMW
+vuz8l7i5xIA08cfeIwfjHvza+hr2cgh8WQXhRN72w/iCIwsyTcF3XL1QA7sFeyMG
+wArkqnHApJddchUrwcOgWndfFbGzBtkNZ9rBiOqh3uwSKRVJcpWGEN5X2pReNLC6
+jwoCcjgdo7jVkYo0qU/nZyEVaFWpS9ZQq6OyCTvVAoGAO/FP8NPrqaDshqsYVUxp
+4mmPqRczaJa+mLBFrhnJ1mBF8MmgLAkDmFmwr8i/O/GsJ2W0zo/2QpXZ8VZ35160
+aqtd0iZ3JeBy/RTtrrwdFJV5NDt9AxBq7H4cvVEX2gb/hXzZIuXSGAN+t6VdjBhB
+n/SQ1hTKJKsYkEfy/miXp10=
+-----END PRIVATE KEY-----
+
+--===============9055186793967377464==
+Content-Type: text/plain
+Content-Disposition: form-data; name="file6"; filename="cacert.txt"
+
+Generated using:
+
+openssl req -new -x509 -days 3650 -nodes -keyout ./cakey.pem -out ./cacert.pem -subj "/C=US/ST=Texas/L=San Antonio/O=Sivel/CN=bogus.http.tests"
+
+--===============9055186793967377464==
+Content-Transfer-Encoding: base64
+Content-Type: image/png
+Content-Disposition: form-data; name="file7"; filename="1x1.png"
+
+iVBORw0KGgoAAAANSUhEUgAAAAEAAAABAQMAAAAl21bKAAAAA1BMVEX///+nxBvIAAAACklEQVQI
+12NgAAAAAgAB4iG8MwAAAABJRU5ErkJggg==
+
+--===============9055186793967377464==
+Content-Type: text/plain
+Content-Disposition: form-data; name="form_field_1"
+
+form_value_1
+--===============9055186793967377464==
+Content-Type: application/octet-stream
+Content-Disposition: form-data; name="form_field_2"
+
+form_value_2
+--===============9055186793967377464==
+Content-Type: text/html
+Content-Disposition: form-data; name="form_field_3"
+
+<html></html>
+--===============9055186793967377464==
+Content-Type: application/json
+Content-Disposition: form-data; name="form_field_4"
+
+{"foo": "bar"}
+--===============9055186793967377464==--
