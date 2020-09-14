@@ -28,6 +28,7 @@ from .handlers import RedirectHandler
 from .handlers import UnixHTTPHandler
 from .headers import Headers
 from .headers import normalize_headers
+from .multipart import prepare_multipart
 from .response import Response
 from .sentinel import Sentinel
 from .utils import update_url_params
@@ -99,11 +100,10 @@ class Session:
                 timeout=None, allow_redirects=True, verify=Sentinel,
                 cert=Sentinel, json=Sentinel, unix_socket=Sentinel):
 
-        if any((files,)):
-            raise NotImplementedError
-
-        if all((data, json)):
-            raise TypeError('Cannot specify both "data" and "json"')
+        if sum(bool(x) for x in (data, json, files)) > 1:
+            raise TypeError(
+                '"data", "json", and "files" are mutually exclusive'
+            )
 
         _headers = self.headers.copy()
         _headers.update(headers or {})
@@ -122,6 +122,10 @@ class Session:
                 _headers['content-type'] = 'application/json'
             encoding = _headers.get_param('charset', 'utf-8')
             data = _json.dumps(json).encode(encoding)
+
+        if files:
+            content_type, data = prepare_multipart(files)
+            _headers['content-type'] = content_type
 
         https_kwargs = {
             'context': self._create_context(verify),
