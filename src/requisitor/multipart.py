@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+# Copyright 2020 Matt Martz
+
 import mimetypes
 from collections import namedtuple
 from collections.abc import Mapping
